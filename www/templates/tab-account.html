@@ -1,0 +1,20 @@
+<ion-view title="Account">
+  <ion-content class="has-header padding">
+    <p>Account</p>
+    <button ng-click="logOut()">Log Out</button>
+    <form ng-submit="editAccount()">
+    	<p>Edit your Username and email</p>
+    	<input type="text" ng-model="account.username">
+    	<input type="text" ng-model="account.email">
+
+    	<button type="submit">Submit</button>
+	</form>
+	<form ng-submit="changePassword()">
+		<p>Change your password</p>
+    	<input type="text" ng-model="password.current">
+    	<input type="text" ng-model="password.new">	
+		<input type="text" ng-model="password.confirm">	
+		<button type="submit">Submit</button>
+	</form>
+  </ion-content>
+</ion-view>

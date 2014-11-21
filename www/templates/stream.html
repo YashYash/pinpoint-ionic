@@ -1,0 +1,27 @@
+<stream-directive>
+  <ion-view title="Stream" id="stream">
+    <ion-header-bar class="bar-subheader item-input-inset" id="streams-address" ng-if="address">
+      <p class="global-center">
+      {{address}}
+      </p>
+      <span class="refresh-address ion-ios7-refresh-empty" ng-click="refreshStream()"></span>
+    </ion-header-bar>
+    <ion-content class="has-header">
+      <div id="stream-loading" ng-if="!address">
+        <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png" id="pinpoint-icon">
+        <img id="loading-ads" class="rotating" src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/QiTrTSYGNcXsCTM/rotaing-circle.png">
+        <p class="global-center" id="loading-ads-message"><span class="pinpoint-pink">Pinpointing</span> Ads in your <span class="pinpoint-pink">Zone</span></p>
+      </div>
+      <ion-item ng-if="ads && hideAds === 'false'" ng-repeat="ad in ads" class="list-items global-items" ng-class-even="'no-background'">
+        <a ng-href="/#/tab/stream/{{ad._id}}">{{ad.title}}</a>
+        </br>
+        <p ng-if="ad.user">{{ad.user.username}}</p>
+        <p ng-if="!ad.user">Posted by Pinpoint</p>
+        <span class="icon-location has-icon">{{ad.address}}</span>
+        <br>
+        <span class="icon-tag-2 has-icon">{{ad.price}}</span>
+      </ion-item>
+      <ion-infinite-scroll on-infinite="loadMore()" ng-if="moreData === 'true' && ads" distance="1%"></ion-infinite-scroll> 
+    </ion-content>
+  </ion-view>
+</stream-directive>

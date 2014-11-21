@@ -1,0 +1,29 @@
+<ion-view title="Social">
+  <ion-content class="padding" hm-swipe-left="tonews()">
+  <button hm-hold="testtap()" hm-release="released()">Tap me</button>
+  <h1>{{hold}}</h1>
+    <h1>Welocome {{ user.username }}</h1>
+    YOUTUBE
+    <ion-list hm-swipe="swiping()">
+      <ion-item ng-repeat="youtube in youtubes" type="item-text-wrap">
+    	{{youtube.title.$t}}
+    	{{youtube.media$group.media$category.label}}
+      </ion-item>
+    </ion-list>
+    REDDIT
+    <ion-list>
+      <ion-item ng-repeat="reddit in reddits" type="item-text-wrap">
+    	{{reddit.data.title}}
+    	<img ng-src="{{reddit.data.thumbnail}}">
+    	<img ng-src="{{reddit.data.url}}">
+      </ion-item>
+    </ion-list>  
+    INSTAGRAM  
+    <ion-list>
+      <ion-item ng-repeat="p in pics" type="item-text-wrap">
+		<img ng-src="{{p.images.thumbnail.url}}" />
+		<p ng-bind-html="p.caption.text | linky"></p> 
+      </ion-item>
+    </ion-list>  
+  </ion-content>
+</ion-view>

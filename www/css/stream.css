@@ -1,0 +1,57 @@
+/*Address*/
+#stream #streams-address{
+	background:#1a1a1a;
+	color:#3f3f3f;
+	padding:0;
+	border-width:0px;
+	height: 73px;
+}
+
+#stream #streams-address span.refresh-address {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	top: 14px;
+	font-size: 32px;
+	color: #9c005d;	
+	cursor:pointer;
+}
+#stream #streams-address p{
+	top:14px;
+	text-align: center;
+}
+
+/*Strem Loading ads*/
+#stream #loading-ads {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 125px;	
+}
+
+#stream #pinpoint-icon{
+	position: absolute;
+	top: 155px;
+	width: 56px;
+	left: 0;
+	right: 0;
+	margin: auto;	
+}
+
+#stream #loading-ads-message{
+	color:white;
+	top:245px;
+	text-align: center;
+}
+
+/*Stream Content*/
+#stream .scroll-content{
+	padding-top:74px;
+}
+.scroll-content{
+	bottom:0px;
+}
+.scroll-content .scroll{
+	padding-bottom: 43px;
+}

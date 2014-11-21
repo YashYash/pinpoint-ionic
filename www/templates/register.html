@@ -1,0 +1,18 @@
+<div class="auth-container">
+  <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png" class="auth-icon">
+  <p class="auth-heading">Pinpoint</p>
+  <p class="auth-small-heading">Register</p>
+  <p ng-if="usernameExists === 'true'" class="error-messages error-messages-1">Username is already taken</p>
+  <p ng-if="usernameEmpty === 'true'" class="error-messages error-messages-1">Please enter a username</p>
+  <p ng-if="passwordMatch === 'false'" class="error-messages error-messages-2">Passwords do not match</p>
+  <form ng-submit="register()">
+    <input type='text' ng-model="auth.username" placeholder="Username">
+    <input type='text' ng-model="auth.email" placeholder="Email (optional)">
+    <input type='text' ng-model="auth.password" placeholder="Password">
+    <input type='text' ng-model="auth.confirm" placeholder="Confirm Password">
+    <span class="wrong-username error-crosses" ng-if="wrongUsername === 'true'">x</span>
+    <span class="wrong-password error-crosses" ng-if="wrongPassword === 'true'">x</span>
+    <button class="authenticate">Register</button>
+    <p class="auth-register-message">Already have an account? <a href="#/login">Login</a> here.</p>
+  </form>
+</div>

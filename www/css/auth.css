@@ -1,0 +1,130 @@
+/*Login and Register*/
+
+.auth-container {
+  background: rgba(26, 26, 26, 1);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+}
+.auth-container .auth-icon {
+  position: relative;
+  width: 136px;
+  margin: auto;
+  text-align: center;
+  top: 55px;
+  border: 3px solid #666666;
+  border-radius: 100%;
+  padding: 33px;
+}
+.auth-container p.auth-heading {
+  color: rgba(156, 0, 93, 1);
+  font-size: 18px;
+  position: relative;
+  top: 66px;
+}
+.auth-container p.auth-small-heading {
+  color: rgba(156, 0, 93, 1);
+  font-size: 14px;
+  position: relative;
+  top: 66px;
+  color: white;
+}
+.auth-container p.error-messages {
+  color: rgba(156, 0, 93, 1);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.auth-container p.error-messages-1 {
+  top: 260px;
+}
+.auth-container p.error-messages-2 {
+  top: 280px;
+}
+.auth-container form {
+  width: 230px;
+  position: relative;
+  margin: auto;
+  top: 120px;
+  color: #666666;
+  text-align: center;
+}
+.auth-container form input {
+  text-align: center;
+  border-bottom: 0.08em solid #666666;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+.auth-container form .authenticate {
+  color: #666666;
+  font-size: 18px;
+  background: #120e0e;
+  width: 100%;
+  opacity: 0.7;
+  height: 40px;
+  border-radius: 3px;
+  border: 0;
+}
+.auth-container form .auth-forgot {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  top: 5px;
+}
+.auth-container form .auth-register-message {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 4px;
+}
+.auth-container form .auth-register-message a {
+  color: rgba(156, 0, 93, 1);
+  cursor: pointer;
+}
+.error-crosses {
+  position: absolute;
+  right: -31px;
+  background: rgba(156, 0, 93, 1);
+  color: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  padding: 0px 0px 9px 0px;
+  font-size: 16px;
+}
+.auth-container form span.wrong-password {
+  bottom: 98px;
+}
+.auth-container form span.wrong-username {
+  bottom: 150px;
+}
+@media (max-height: 580px) {
+  .auth-container .auth-icon {
+    top: 19px;
+  }
+  .auth-container p.auth-heading {
+    top: 25px;
+  }
+  .auth-container p.auth-small-heading {
+    top: 25px;
+  }
+  .auth-container form {
+    top: 64px;
+  }
+  .auth-container p.error-messages-1 {
+    top: 210px;
+  }
+  .auth-container p.error-messages-2 {
+    top: 230px;
+  }
+}

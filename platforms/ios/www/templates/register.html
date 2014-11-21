@@ -1,0 +1,24 @@
+<ion-view title="Register">
+	<ion-nav-buttons side="left">
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<form ng-submit="register()">
+		    <label for="name" class="item item-input">
+		    	<span class="input-label">Email</span>
+		    	<input type="text" name="email" ng-model="auth.username" placeholder="Email" required>
+		    </label>
+
+		    <label class="item item-input">
+		    	<span class="input-label">Password</span>
+		    	<input input type="password" name="password" ng-model="auth.password" placeholder="Password" required>
+		    </label>
+
+		    <button class="button button-positive button-block"  type="submit">
+		    	Register
+		    </button>
+		</form>
+		<div ng-repeat="account in accounts">
+			{{account.username}}
+		</div>
+	</ion-content>
+</ion-view>

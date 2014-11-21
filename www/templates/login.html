@@ -1,0 +1,15 @@
+<div class="auth-container">
+  <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png" class="auth-icon">
+  <p class="auth-heading">Pinpoint</p>
+  <p class="auth-small-heading">Login</p>
+  <form ng-submit="login()">
+    <input type='text' ng-model="auth.username" placeholder="Username">
+    <input type='text' ng-model="auth.password" placeholder="Password">
+    <span class="wrong-username error-crosses" ng-if="wrongUsername === 'true'">x</span>
+    <span class="wrong-password error-crosses" ng-if="wrongPassword === 'true'">x</span>
+    <button class="authenticate">Login</button>
+    <span class="auth-forgot">Forgot you password?</span>
+    <p class="auth-register-message">Don't have an account? <a href="#/register">Register</a> here.</p>
+  </form>
+</div>
+

@@ -1,0 +1,85 @@
+/*Ad header*/
+.ad-header{
+	background: #1e1e1e;
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.ad-header .ad-header-content{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	color: #363636;
+	vertical-align: middle;	
+}
+.ad-header .ad-header-content .ad-header-items.with-border {
+	border-right: 3px solid #1a1a1a;
+}
+.ad-header .ad-header-content .ad-header-items {
+	display: inline-block;
+	width: 47%;
+	height: 100%;
+	vertical-align: middle;
+	padding-top: 12px;	
+} 
+.ad-header .ad-header-content .ad-header-items i{
+	color: #9c005d;
+	font-size: 19px;
+	margin-right: 7px;
+	position: relative;
+	top: 2px;	
+}
+
+.ad-header .ad-header-content .ad-header-item-edit{
+	padding-top: 8px;
+}
+.ad-header .ad-header-content .ad-header-item-edit i {
+	color: #9c005d;
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+	margin-right: 4px;	
+}
+/*Image slideshow*/
+.slider{
+	text-align: center;
+}
+.slider-pager{
+	display: none;
+}
+.swipe-message{
+	text-align:center;
+	color:#9c005d;
+}
+/*List Card*/
+.card p {
+	margin:0px;
+}
+.list:last-child.card {
+	background:#1f1f1f;
+}
+.card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child{
+	background: #1c1c1c;
+	border-width:0px;
+	color:white;
+}
+.item h2:last-child {
+	color:white;
+	text-align:center;
+	font-weight:300;
+}
+
+.card .item:last-child, .list-inset .item:last-child, .padding > .list .item:last-child {
+	background: #1f1f1f;
+	border-width:0px;
+}
+.card .item.loc-price {
+	background: #1d1d1d;
+	border-width: 0px;
+	border-bottom: 3px solid #1a1a1a;
+}
+
+.ad-icons {
+	color: #9c005d;
+	margin-right: 10px;
+}

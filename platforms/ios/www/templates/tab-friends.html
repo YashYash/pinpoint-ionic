@@ -1,0 +1,11 @@
+<ion-view title="Friends">
+  <ion-content class="has-header">
+      <ion-item ng-repeat="nytsport in nytsports" type="item-text-wrap">
+    	<h3>{{nytsport.title}}</h3>
+    	<img ng-src="{{nytsport.image}}">
+    	<p> {{nytsport.abstract}}</p>
+    	<span>{{nytsport.author}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

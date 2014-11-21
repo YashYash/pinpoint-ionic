@@ -1,0 +1,96 @@
+<ion-view title="Ad">
+  <ion-header-bar class="bar-subheader item-input-inset ad-header">
+    <div class="ad-header-content">
+      <div class="ad-header-items with-border">
+        <i class="icon-star-2" ng-click="addtoWishlist(ad)"></i>Add to Wishlist
+      </div>
+      <div class="ad-header-items">
+        <i class="icon ion-chatbubbles" ng-click="startChat(ad.user)"></i>Chat
+      </div>
+    </div>
+  </ion-header-bar>
+  <ion-content has-header="true" padding="true">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="image in ad.images">
+        <img ng-src="{{image}}">
+      </ion-slide>
+    </ion-slide-box>
+    <p ng-if="ad.images.length > 0" class='swipe-message'>Swipe through the images</p>
+    <div class="list card">
+      <div class="item">
+        <h2>{{ad.title}}</h2>
+      </div>
+      <div class="item loc-price">
+        <p><i class="ad-icons icon-tag-2"></i>{{ad.price}}</p>
+      </div>
+      <div class="item loc-price">
+        <p><i class="ad-icons icon-location"></i>{{ad.address}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.seller.length > 0">
+        <p>Seller: {{ad.seller}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.make.length > 0">
+        <p>Make: {{ad.make}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.model && ad.model.length > 0">
+        <p>Model: {{ad.model}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.color.length > 0">
+        <p>Color: {{ad.color}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.drive.length > 0">
+        <p>Drive: {{ad.drive}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.transmission.length > 0">
+        <p>Transmission: {{ad.transmission}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.vehicletype.length > 0">
+        <p>Type: {{ad.vehicletype}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.kilometers.length > 0">
+        <p>Kilometers: {{ad.kilometers}} km</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.miles.length > 0">
+        <p>Miles: {{ad.miles}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.fuel.length > 0">
+        <p>Fuel: {{ad.fuel}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.rentby.length > 0">
+        <p>Rent By: {{ad.rentby}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.furnished.length > 0">
+        <p>Furnished: {{ad.furnished}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.bathrooms.length > 0">
+        <p>Bathrooms: {{ad.bathrooms}}</p>
+      </div>
+      <div class="item loc-price" ng-if="ad.petfriendly.length > 0">
+        <p>Pet Friendly: {{ad.petfriendly}}</p>
+      </div>
+      <div class="item item-body">
+        <p>
+          {{ad.description}}
+        </p>
+      </div>
+
+      <!--       <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item">
+          <i class="icon ion-thumbsup" ng-click="addtoWishlist(ad)"></i>
+          Add to your list
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-chatbox" ng-click="startChat(ad.user)"></i>
+          Chat
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div> -->
+
+    </div>
+
+
+  </ion-content>
+</ion-view>
