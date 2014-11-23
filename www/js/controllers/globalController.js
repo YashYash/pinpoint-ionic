@@ -10,7 +10,7 @@ pinpoint.controller('globalController', function(
 
   console.log('#### Global Controller');
   $rootScope.environment = 'Production';
-  $rootScope.apiUrl = 'https://www.pinpoint.zone';
+  $rootScope.apiUrl = 'https://desolate-meadow-6374.herokuapp.com';
   console.log('#### Environment set: ');
   console.log($rootScope);
 });
