@@ -38,12 +38,14 @@
 
   <!-- global -->
   <link rel="stylesheet" type="text/css" href="css/global.css">
+  <script type="text/javascript" src="js/controllers/globalController.js"></script>
   <script type="text/javascript" src="js/directives/globalDirective.js"></script>
 
   <!-- Fonts & Icons-->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,600,400' rel='stylesheet' type='text/css'>
   <link href="https://fontastic.s3.amazonaws.com/ajkCKZcprWV8fCCd7UykoN/icons.css" rel="stylesheet">
   <!-- Services -->
+  <script type="text/javascript" src="js/factories/envService.js"></script>
   <script type="text/javascript" src="js/factories/authService.js"></script>
   <script type="text/javascript" src="js/factories/geoService.js"></script>
   <script type="text/javascript" src="js/factories/adsService.js"></script>
@@ -108,7 +110,7 @@
 
 </head>
 
-<body ng-app="pinpoint" animation="slide-left-right-ios7">
+<body ng-app="pinpoint" animation="slide-left-right-ios7" ng-controller="globalController">
   <global-directive>
     <ion-nav-bar class="bar-stable nav-title-slide-ios7">
       <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
