@@ -184,6 +184,16 @@ pinpoint.config(function(
     }
   })
 
+  .state('tab.wish', {
+    url:'/wishlist/:id',
+    views: {
+      'wishlist': {
+        templateUrl: 'templates/wish.html',
+        controller: 'wishController'
+      }
+    }
+  })
+
   // Account
   .state('tab.account', {
     url: '/account',

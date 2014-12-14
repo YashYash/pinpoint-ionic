@@ -32,5 +32,8 @@ pinpoint.controller('wishlistController', function(
 			console.log(reject);
 		});
 	};
-
+  $scope.seeWish = function(wish) {
+    console.log('#### loading the ad');
+    $state.go('tab.wish', {id: wish._id});
+  }
 });

@@ -1,0 +1,37 @@
+<ion-view title="Post">
+    <ion-header-bar class="bar-subheader item-input-inset ad-header">
+      <div class="ad-header-content">
+        <div class="ad-header-items with-border">
+          <i class="ion-chatbubbles"></i>Chat
+        </div>
+        <div class="ad-header-items" ng-click="openModal()">
+          <i class="icon-trashcan"></i>Remove
+        </div>        
+      </div>
+    </ion-header-bar>
+  <ion-content has-header="true" padding="true">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="image in ad.images">
+        <img ng-src="{{image}}">
+      </ion-slide>
+    </ion-slide-box>
+    <p ng-if="post.images.length > 0"class='swipe-message'>Swipe through the images</p>
+    <div class="list card">
+
+      <div class="item">
+        <h2>{{ad.title}}</h2>
+      </div>
+      <div class="item loc-price">
+        <p>{{ad.price}}</p>
+      </div>
+      <div class="item loc-price">
+        <p>{{ad.address}}</p>
+      </div> 
+      <div class="item item-body">
+        <p>
+          {{ad.description}}
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

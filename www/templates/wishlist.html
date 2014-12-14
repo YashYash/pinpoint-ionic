@@ -7,7 +7,7 @@
   </ion-header-bar>
   <ion-content class="has-header">
     <h3 ng-if="wishlist.length < 1" class="no-wishlist-items">No items in your wishlist :( While viewing an ad, click on <i class="icon-star-2 wishlist-icon"></i> to add it to your wishlist.</h3>
-    <ion-item type="item-text-wrap" ng-repeat="item in wishlist | filter:search" class="list-items global-items" ng-class-even="'no-background'">
+    <ion-item type="item-text-wrap" ng-repeat="item in wishlist | filter:search" class="list-items global-items" ng-class-even="'no-background'" ng-click="seeWish(item)">
       <a>{{item.title}}</a>
     </ion-item>
     </ion-list>
