@@ -10,7 +10,7 @@ pinpoint.controller('globalController', function(
 
   console.log('#### Global Controller');
 
-  $rootScope.environment = 'Development';
+  $rootScope.environment = 'Production';
   $rootScope.apiUrl = 'http://localhost:3000';
   $rootScope.geoApi = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=';
   console.log('#### Environment set: ');
