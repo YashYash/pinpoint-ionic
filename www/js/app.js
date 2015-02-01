@@ -3,7 +3,8 @@ var pinpoint = angular.module('pinpoint', ['ionic', 'ngSanitize', 'angular-gestu
 
 
 pinpoint.factory('socket', function($http) {
-  var socket = io.connect('https://desolate-meadow-6374.herokuapp.com/dashboard/#/');
+  var socket = io.connect('https://desolate-meadow-6374.herokuapp.com:46030');
+  // var socket = io.connect('http://localhost:3000');
   return socket;
 });
 

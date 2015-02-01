@@ -10,7 +10,8 @@ pinpoint.controller('registerCtrl', function(
   $scope.auth = {
     username: '',
     password: '',
-    confirm: ''
+    confirm: '',
+    phone: ''
   };
   $scope.register = function() {
     console.log($scope.auth);

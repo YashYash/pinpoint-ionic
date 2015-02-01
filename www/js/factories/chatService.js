@@ -12,9 +12,12 @@ pinpoint.service('chatService', function(
       var url = $rootScope.apiUrl + '/api/chat/user/' + $localStorage.user._id;
       return $http.get(url);
     },
-    startChat: function(user) {
+    startChat: function(user, ad) {
+      var data = {
+        ad: ad
+      };
       var url = $rootScope.apiUrl + '/api/chat/start/' + $localStorage.user._id + '/' + user;
-      return $http.get(url);
+      return $http.post(url, data);
     },
     getMessages: function(id) {
       var url = $rootScope.apiUrl + '/api/chat/convo/' + $localStorage.user._id + '/' + id;

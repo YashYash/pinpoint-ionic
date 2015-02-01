@@ -1,10 +1,10 @@
 /*Global*/
 
 .modal {
-  background-color: rgba(26, 26, 26, 0.4) !important;
+  background-color: rgba(26, 26, 26, 0) !important;
 }
 .modal-open .modal {
-  background-color: rgba(26, 26, 26, 0.4) !important;
+  background-color: rgba(26, 26, 26, 0) !important;
 }
 /*Delete*/
 

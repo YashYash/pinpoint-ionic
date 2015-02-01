@@ -55,7 +55,7 @@ pinpoint.controller('adController', function(
       console.log('#### Cannot start convo with yourself');
     } else {
       console.log('#### Starting convo');
-      var initChat = chatService.startChat(user);
+      var initChat = chatService.startChat(user, $scope.ad);
       initChat.then(function(resolve) {
         console.log('#### Resolved');
         console.log(resolve);
