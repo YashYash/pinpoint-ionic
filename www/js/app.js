@@ -1,8 +1,9 @@
 'use strict';
 var pinpoint = angular.module('pinpoint', ['ionic', 'ngSanitize', 'angular-gestures', 'ngStorage']);
 
-pinpoint.factory('socket', function() {
-  var socket = io.connect('http://localhost:3000');
+
+pinpoint.factory('socket', function($http) {
+  var socket = io.connect('https://desolate-meadow-6374.herokuapp.com/dashboard/#/');
   return socket;
 });
 
