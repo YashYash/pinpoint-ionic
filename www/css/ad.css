@@ -40,6 +40,11 @@
 	top: 3px;
 	margin-right: 4px;	
 }
+
+.no-chat-button {
+	width: 100% !important;
+	border-right:0px !important;
+}
 /*Image slideshow*/
 .slider{
 	text-align: center;

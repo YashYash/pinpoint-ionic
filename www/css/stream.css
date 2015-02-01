@@ -4,21 +4,26 @@
 	color:#3f3f3f;
 	padding:0;
 	border-width:0px;
-	height: 73px;
+	height: 49px;
+	top:36px;
 }
 
 #stream #streams-address span.refresh-address {
 	position: relative;
 	width: 100%;
 	text-align: center;
-	top: 14px;
+	top: 11px;
 	font-size: 32px;
 	color: #9c005d;	
 	cursor:pointer;
 }
 #stream #streams-address p{
-	top:14px;
+	top:4px;
 	text-align: center;
+	width: 90%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;	
 }
 
 /*Strem Loading ads*/
@@ -27,12 +32,12 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 125px;	
+	top: 72px;	
 }
 
 #stream #pinpoint-icon{
 	position: absolute;
-	top: 155px;
+	top: 100px;
 	width: 56px;
 	left: 0;
 	right: 0;
@@ -41,13 +46,14 @@
 
 #stream #loading-ads-message{
 	color:white;
-	top:245px;
+	top:194px;
 	text-align: center;
 }
 
 /*Stream Content*/
 #stream .scroll-content{
-	padding-top:74px;
+	padding-top:53px;
+	top:30px;
 }
 .scroll-content{
 	bottom:0px;

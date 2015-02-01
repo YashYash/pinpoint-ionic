@@ -52,6 +52,7 @@
   top: 120px;
   color: #666666;
   text-align: center;
+  padding-bottom:50px;
 }
 .auth-container form input {
   text-align: center;

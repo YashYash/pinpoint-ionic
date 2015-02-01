@@ -1,10 +1,10 @@
 <ion-view title="Ad">
   <ion-header-bar class="bar-subheader item-input-inset ad-header">
     <div class="ad-header-content">
-      <div class="ad-header-items with-border">
+      <div class="ad-header-items with-border" ng-class="{'no-chat-button':(!ad.user)}">
         <i class="icon-star-2" ng-click="addtoWishlist(ad)"></i>Add to Wishlist
       </div>
-      <div class="ad-header-items">
+      <div class="ad-header-items" ng-if="ad.user">
         <i class="icon ion-chatbubbles" ng-click="startChat(ad.user)"></i>Chat
       </div>
     </div>

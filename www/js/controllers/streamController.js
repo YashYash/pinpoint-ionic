@@ -123,4 +123,8 @@ pinpoint.controller('streamController', function(
     console.log('#### Refreshing Stream. Getting the location');
     geoService.getLocation();
   };
+
+  $scope.goToAd = function(id) {
+    $state.go('tab.stream-ad', {id: id});
+  }
 });

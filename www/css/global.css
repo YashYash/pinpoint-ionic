@@ -13,6 +13,7 @@ input {
   border: 0;
   background: none;
   font-size: 14px;
+  -webkit-border-radius: 0px !important;
 }
 button {
   outline: 0;
@@ -62,6 +63,8 @@ p {
 .bar.bar-stable .title {
   color: #9c005d;
   font-weight: 200;
+  height:30px;
+  top:-7px !important;
 }
 /*Global-bottom Nav*/
 

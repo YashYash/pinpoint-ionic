@@ -101,24 +101,24 @@
 
 @media (max-height: 530px) {
   #landing #logo {
-    top:55px;
+    top:35px;
   }
   #landing p#sub-heading {
-    top:166px;
+    top:146px;
   }
   #landing #pin-circle {
-    top:203px;
+    top:183px;
   } 
   #landing #pin-outercircle {
-    top:199px;
+    top:179px;
   }   
   #landing #vertical-line {
-    top:207px;
+    top:187px;
   } 
   #landing #ad-count {
-    top:315px;
+    top:295px;
   }   
   #landing #address {
-    top:403px;
+    top:383px;
   }   
 }
