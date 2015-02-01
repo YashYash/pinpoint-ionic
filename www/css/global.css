@@ -71,6 +71,10 @@ p {
 .tabs {
   background: rgba(26, 26, 26, 0.9);
   border-width: 0px;
+  height:37px;
+}
+.tabs a span {
+  display: none;
 }
 .tab-item .icon {
   display: block;
