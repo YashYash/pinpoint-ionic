@@ -1,43 +1,27 @@
-angular.module('starter.controllers', [])
+angular.module('directory.controllers', [])
 
-.controller('DashCtrl', function($scope, $http, socket) {
-	console.log("working");
-	$http.get('http://localhost:3000/api/accounts').success(function(data) {
-		console.log("api was called");
-		console.log(data);
-		$scope.accounts = data;
-	})
-	socket.emit("connect me", "hopefull connected");
+    .controller('EmployeeListCtrl', function ($scope, Employees) {
 
-	$scope.testPost = function(data) {
-		var data = data
-		socket.emit("testing post", "testing post");
-		$http.post('http://localhost:3000/api/test', {name: data }).success(function(response) {
-			console.log("post was successfull");
-			console.log(response);
-		})
-	}
-    $scope.facebookLike = function (item) {
-        $http.post('/api/v1/click_count/?format=json', {"facebook_count": "like", "video": item.resource_uri}).
-            success(function (response) {
-                console.log(response);
-                $location.path("/");
+        $scope.searchKey = "";
 
-            });
-    };
+        $scope.clearSearch = function () {
+            $scope.searchKey = "";
+            $scope.employees = Employees.query();
+        }
 
+        $scope.search = function () {
+            $scope.employees = Employees.query({name: $scope.searchKey});
+        }
 
-	
-})
+        $scope.employees = Employees.query();
+    })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+    .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
+        console.log('details');
+        $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
+    })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('AccountCtrl', function($scope) {
-})
-
+    .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
+        console.log('reports');
+        $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
+    });

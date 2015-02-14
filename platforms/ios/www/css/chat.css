@@ -1,0 +1,55 @@
+/*Chat Room*/
+
+#chat-content {
+  height: 80%;
+}
+#chat-box {
+  width: 100%;
+  height: 300px;
+}
+#chat-box .chat-message {
+  border-width: 0px;
+  font-size: 14px;
+  background: #1e1e1e;
+  margin: 2px 0px;
+  color: #eeeeee;
+  white-space: normal;
+}
+.send-message-container {
+  position: fixed;
+  bottom: 3px;
+  height: 115px;
+  width: 100%;
+  background: #1e1e1e;
+  padding-top: 20px;
+}
+.send-message-container form div label {
+  background: #2a2a2a;
+}
+.send-message-container form div {
+  background: #1e1e1e;
+  border-width: 0px;
+}
+.send-message-container form div label input {
+  background: #2a2a2a;
+  color: #eeeeee;
+}
+.send-message-container form div button {
+  background-color: #9c005d;
+  width: 55px;
+  color: white;
+  border-width: 0px;
+}
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+.typing-message {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  top: 0px;
+  left: 13px;
+}

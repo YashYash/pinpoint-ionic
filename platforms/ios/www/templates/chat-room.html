@@ -1,0 +1,27 @@
+<ion-view title="{{seller.username}}">
+  <chatroom-directive>
+    <ion-content class="has-header" id="chat-content" delegate-handle="contentScroll">
+      <div id="chat-box">
+        <ion-list>
+          <ion-item type="item-text-wrap" ng-class="{'align-right': (message.username !== username), 'align-left': (message.username === username)}" ng-repeat="message in messages | orderBy: 'created'" class="chat-message">
+            <span>{{message.message}}</span>
+            <p>{{message.username}}</p>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-content>
+    <div class="send-message-container">
+      <span class="typing-message" ng-if="typing === 'true'">{{seller.username}} is typing ...</span>
+      <form ng-submit="sendMessage()">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="Message" ng-model="send.message">
+          </label>
+          <button class="button button-small">
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+    <chatroom-directive>
+</ion-view>

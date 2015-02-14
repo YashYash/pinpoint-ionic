@@ -2,10 +2,10 @@
 var pinpoint = angular.module('pinpoint', ['ionic', 'ngSanitize', 'angular-gestures', 'ngStorage']);
 
 
-pinpoint.factory('socket', function($http) {
+pinpoint.factory('socket', function() {
   // var socket = io.connect('https://desolate-meadow-6374.herokuapp.com:46030');
-  // var socket = io.connect('http://localhost:3000');
-  // return socket;
+  var socket = io.connect('http://localhost:3000');
+  return socket;
 });
 
 pinpoint.run(function($ionicPlatform, $rootScope) {
@@ -44,7 +44,7 @@ pinpoint.config(function(
 
   // Auth
     .state('register', {
-      url: '/register',
+      url: '/',
       templateUrl: 'templates/register.html',
       controller: 'registerCtrl'
     })
@@ -56,7 +56,7 @@ pinpoint.config(function(
 
   // Landing
   .state('landing', {
-    url: '/',
+    url: '/landing',
     templateUrl: 'templates/landing.html',
     controller: 'landingCtrl'
   })

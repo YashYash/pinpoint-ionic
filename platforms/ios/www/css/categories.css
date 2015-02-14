@@ -1,0 +1,73 @@
+/*Categories tab*/
+.categories-repeat {
+	background-size: 100% !important;
+	height: 115px !important;
+	text-align: left;
+	color: #eeeeee !important;
+	border-width: 0px;
+	background-position: center;
+	margin: 2px 0px;
+	padding-top:40px;	
+}
+
+.categories-repeat a {
+	color:#eeeeee;
+	font-size: 18px;
+	letter-spacing: 2px;
+	position: relative;
+	z-index: 6;	
+}
+
+.grey-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(31,31,31,0.97);
+	top: 0;
+	left: 0;
+	z-index: 5;	
+}
+
+.categories-repeat .category-icon { 
+	color: #9c005d;
+	margin-right: 15px;
+	position: relative;
+	z-index: 7;
+	font-size: 24px;
+	top: 5px;
+}
+
+.categories-repeat .icon-angle-double-up {
+	position: absolute;
+	z-index: 200;
+	right: 13px;
+	top: 38px;
+	font-size: 40px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	color: #9c005d;	
+}
+
+/*Category select before filling out form*/
+.categories-repeat-post {
+	padding-top:10px;
+}
+.categories-repeat-post.activated {
+	background: none;
+}
+.categories-repeat-post i.icon-angle-double-up {
+	position: absolute;
+	top: 14px;
+	transform: rotate(90deg);
+	right: 10px;
+	font-size: 20px;
+	color: #9c005d;	
+}
+.categories-repeat-post a i {
+	color: #9c005d;
+	margin-right: 10px;
+	font-size: 20px;
+	position: relative;
+	top: 3px;	
+}

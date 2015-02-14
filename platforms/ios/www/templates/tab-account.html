@@ -1,5 +1,50 @@
 <ion-view title="Account">
-  <ion-content class="has-header padding">
-    <h1>Account</h1>
+  <script type="text/ng-template" id="email-username.html">
+    <div class="modal">
+      <ion-content class="username-form account-modal">
+        <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png">
+        <p class="edit-message">Edit Username Email</p>
+        <form ng-submit="editAccount()">
+          <input type="text" ng-model="account.username">
+          <input type="text" ng-model="account.email">
+          <ul>
+            <li class="with-border">
+              <button type='submit'>Save</button>
+            </li>
+            <li ng-click="closeModal('username')">Cancel</li>
+          </ul>
+        </form>
+      </ion-content>
+    </div>
+  </script>
+  <script type="text/ng-template" id="password.html">
+    <div class="modal">
+      <ion-content class="password-form account-modal">
+        <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png">
+        <p class="edit-message">Edit Username Email</p>
+        <form ng-submit="changePassword()">
+          <input type="password" ng-model="password.current" placeholder="Current Passoword">
+          <input type="password" ng-model="password.new" placeholder="New Passoword">
+          <input type="password" ng-model="password.confirm" placeholder="Confirm Passoword">
+          <ul>
+            <li class="with-border">
+              <button type='submit'>Change</button>
+            </li>
+            <li ng-click="closeModal('password')">Cancel</li>
+          </ul>
+        </form>
+      </ion-content>
+    </div>
+  </script>
+  <ion-content class="has-header padding" id="account-tab">
+    <ion-item ng-click="openModal('username')" class="account-item">
+      <i class="ion-edit"></i> Edit Email & Username
+    </ion-item>
+    <ion-item ng-click="openModal('password')" class="account-item">
+      <i class="ion-edit"></i> Change Password
+    </ion-item>
+    <ion-item ng-click="logOut()" class="account-item">
+      <i class="ion-log-out"></i> Log Out
+    </ion-item>
   </ion-content>
 </ion-view>

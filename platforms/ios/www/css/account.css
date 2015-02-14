@@ -1,0 +1,18 @@
+#account-tab {
+  padding: 0;
+}
+#account-tab .account-item {
+  background: #1e1e1e;
+  border-width: 0;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #5f5f5f;
+  padding: 40px 0px;
+}
+#account-tab .account-item i {
+  color: #9c005d;
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}

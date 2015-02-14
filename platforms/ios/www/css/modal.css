@@ -1,0 +1,149 @@
+/*Global*/
+
+.modal {
+  background-color: rgba(26, 26, 26, 0) !important;
+}
+.modal-open .modal {
+  background-color: rgba(26, 26, 26, 0) !important;
+}
+/*Delete*/
+
+.modal-scroll-content {
+  width: 90%;
+  height: 202px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #1f1f1f;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0px !important;
+  text-align: center !important;
+  color: #eeeeee !important;
+  font-size: 18px !important;
+}
+.modal-scroll-content p.delete-message {
+  position: relative;
+  padding: 0px 20px;
+  top: 120px;
+  font-size: 14px;
+}
+.modal-scroll-content img {
+  border: 3px solid #9c005d;
+  border-radius: 100%;
+  height: 80px;
+  padding: 15px;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 25px;
+}
+.modal-scroll-content ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -130px;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.modal-scroll-content ul li.with-border {
+  border-right: 2px solid #1f1f1f;
+}
+.modal-scroll-content ul li {
+  display: inline-block;
+  width: 46%;
+  padding: 12px 0px;
+  font-size: 14px;
+}
+/*username email*/
+
+.username-form {
+  height: 295px;
+}
+.password-form {
+  height: 356px;
+}
+.account-modal {
+  width: 90%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #1f1f1f;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0px !important;
+  text-align: center !important;
+  color: #eeeeee !important;
+  font-size: 18px !important;
+}
+.account-modal img {
+  border: 3px solid #9c005d;
+  border-radius: 100%;
+  height: 80px;
+  padding: 15px;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 25px;
+}
+.account-modal p.edit-message {
+  position: relative;
+  padding: 0px 20px;
+  top: 120px;
+  font-size: 14px;
+}
+.password-form form {
+  top: 134px !important;
+}
+.account-modal form {
+  position: relative;
+  top: 120px;
+  color: white;
+}
+.account-modal form input {
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  width: 70%;
+  margin: auto;
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+}
+.username-form ul {
+  bottom: -72px;
+}
+.password-form ul {
+  bottom: -80px;
+}
+.account-modal ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.account-modal ul li.with-border {
+  border-right: 2px solid #1f1f1f;
+}
+.account-modal ul li {
+  display: inline-block;
+  width: 46%;
+  padding: 12px 0px;
+  font-size: 14px;
+}
+.account-modal ul li button {
+  cursor: pointer;
+  color: white;
+  border: 0;
+  outline: 0;
+}

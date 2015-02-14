@@ -1,0 +1,38 @@
+#ads-header {
+  background: #1a1a1a;
+  border-width: 0px;
+}
+#ads-header label {
+  background: #1f1f1f;
+}
+#ads-header label input {
+  color: #9c005d;
+}
+.placeholder-icon {
+  color: #9c005d;
+}
+#ads-header label button {
+  color: #9c005d;
+}
+/*No ads message*/
+
+.no-ads-message {
+  color: #9c005d;
+  font-weight: 200;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  font-size: 16px;
+  position: relative;
+  top: 100px;
+}
+.no-ads-button {
+  width: 190px !important;
+  margin: auto;
+  position: relative;
+  top: 114px;
+  background: none !important;
+  border: 1px solid #9c005d !important;
+  min-height: 19px !important;
+  color: #9c005d !important;
+}

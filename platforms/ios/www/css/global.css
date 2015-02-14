@@ -1,0 +1,167 @@
+html, body {
+  font-family: 'Open Sans', san-serif !important;
+  background: #1a1a1a;
+}
+input, button, select, textarea {
+  font-family: 'Open Sans', san-serif !important;
+}
+a {
+  text-decoration: none;
+}
+input {
+  outline: 0;
+  border: 0;
+  background: none;
+  font-size: 14px;
+  -webkit-border-radius: 0px !important;
+}
+
+button {
+  outline: 0;
+  background: none;
+}
+.scroll-content {
+  background: #1a1a1a;
+}
+/*Font-sizes*/
+
+p {
+  font-size: 14px;
+}
+/*Colors*/
+
+.pinpoint-pink {
+  color: #9c005d;
+}
+/*Global Centering*/
+
+.global-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 15;
+}
+/* Gloaba Rotate*/
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+}
+/*Global-Header*/
+
+.bar.bar-stable {
+  background: #1a1a1a;
+  border-width: 0px;
+}
+.bar.bar-stable .title {
+  color: #9c005d;
+  font-weight: 200;
+  height:33px;
+  top:0px !important;
+}
+/*Global-bottom Nav*/
+
+.tabs {
+  background: rgba(26, 26, 26, 0.9);
+  border-width: 0px;
+  height:37px;
+}
+.tabs a span {
+  display: none;
+}
+.tab-item .icon {
+  display: block;
+  margin: 0 auto;
+  height: 32px;
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+}
+.tab-item .icon span {
+  font-size: 11px;
+  position: relative;
+}
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+  color: #9c005d;
+}
+/*Global ng-repeat*/
+
+.global-items {
+  border-width: 0px;
+  background: #1d1d1d;
+  margin-bottom: 0.2em;
+}
+.global-items.chat-items {
+  height: 90px;
+  padding-left: 100px;
+  padding-top: 32px;
+}
+.global-items.chat-items .profile-pic-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  bottom: 14px;
+  border: 3px solid #9c005d;
+  background-size: 100% 100% !important;
+  background-position: center;
+}
+.global-items.chat-items .profile-pic-container img {
+  width: 100%;
+}
+.global-items a {
+  color: white;
+  opacity: 0.4;
+}
+.global-items span.has-icon {
+  font-size: 14px;
+}
+.global-items span.has-icon:before {
+  font-size: 14px;
+  margin-right: 10px;
+  color: #9c005d;
+}
+.no-background {
+  background: none;
+}
+/*global top header with search bar*/
+
+.ads-header {
+  background: #1a1a1a;
+  border-width: 0px;
+}
+.ads-header label {
+  background: #1f1f1f;
+}
+.ads-header label input {
+  color: #9c005d;
+}
+.placeholder-icon {
+  color: #9c005d;
+}
+.ads-header label button {
+  color: #9c005d;
+}
+/*Slide Box*/
+
+.slide-box-container {
+  width: 90%;
+}
+/*Disable ios auto zoom on input fields*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 14px;
+  }
+}

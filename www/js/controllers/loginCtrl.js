@@ -2,7 +2,9 @@ pinpoint.controller('loginCtrl', function(
 	$scope, 
 	authService,
   $state,
-  $localStorage) {
+  $localStorage,
+  geoService,
+  $rootScope) {
   'use strict';
   console.log('#### Login Controller');
   $scope.auth = {
@@ -43,5 +45,19 @@ pinpoint.controller('loginCtrl', function(
   $scope.$watch('auth.password', function() {
     $scope.wrongUsername = 'false';
     $scope.wrongPassword = 'false';
+  }); 
+  geoService.getLocation();
+  $rootScope.$on('got location', function() {
+    console.log('#### Got the location');
+    console.log($rootScope);
+    var lat = $rootScope.location.lat;
+    var lng = $rootScope.location.lng;
+    geoService.getAddress(lat, lng);
+  });
+  $rootScope.$on('got address', function() {
+    console.log('#### Got the address.');
+    $scope.address = $rootScope.location.address;
+    console.log($scope.address);
   });  
+
 });

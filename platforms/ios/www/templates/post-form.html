@@ -1,0 +1,76 @@
+<ion-view title="Create Ad - {{catName}}">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content class="has-header" id="post-form">
+    <form ng-submit="newAd()">
+      <label for="name" class="item item-input">
+        <span class="input-label">Title</span>
+        <input type="text" ng-model="ad.title" placeholder="Title">
+      </label>
+      <label for="name" class="item item-input">
+        <span class="input-label">Price</span>
+        <input type="text" ng-model="ad.price" placeholder="eg $200">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Make</span>
+        <input type="text" ng-model="ad.make" placeholder="eg Mercedes, BMW ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Model</span>
+        <input type="text" ng-model="ad.model" placeholder="eg CLK 55, RSX ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Kilometers</span>
+        <input type="text" ng-model="ad.kilometers" placeholder="eg 100,000 km">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Type</span>
+        <input type="text" ng-model="ad.vehicletype" placeholder="eg Sedan, Coupe, Suv, Motorcycle, RV ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Transmission</span>
+        <input type="text" ng-model="ad.transmission" placeholder="eg Automatic, Manual ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Color</span>
+        <input type="text" ng-model="ad.color" placeholder="eg Red, Metallic Blue ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Drive</span>
+        <input type="text" ng-model="ad.drive" placeholder="eg AWD, RWD, FWD ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Automobiles'">
+        <span class="input-label">Fuel</span>
+        <input type="text" ng-model="ad.fuel" placeholder="eg Gas, Diesel ...">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Real Estate'">
+        <span class="input-label">Pet Friendly?</span>
+        <input type="text" ng-model="ad.petfriendly" placeholder="yes or no">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Real Estate'">
+        <span class="input-label">Furnished</span>
+        <input type="text" ng-model="ad.furnished" placeholder="yes or no">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Real Estate'">
+        <span class="input-label">Bathrooms</span>
+        <input type="text" ng-model="ad.bathrooms" placeholder="how many bathrooms ">
+      </label>
+      <label class="item item-input" ng-if="catName === 'Real Estate'">
+        <span class="input-label">Size</span>
+        <input type="text" ng-model="ad.size" placeholder="eg 10,000 sqft">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Tags</span>
+        <input type="text" ng-model="ad.tags" placeholder="eg Blue, Cool, Cheap ...">
+      </label>
+      <p class="description-p">Description</p>
+      <textarea type="text" ng-model="ad.description" placeholder="Please be as detailed as possible"></textarea>
+      <button ng-if="ad.address.length > 1" class="button button-positive button-block submit-form-button" type="submit">
+        Create Ad
+      </button>
+    </form>
+    <div ng-repeat="account in accounts">
+      {{account.username}}
+    </div>
+  </ion-content>
+</ion-view>

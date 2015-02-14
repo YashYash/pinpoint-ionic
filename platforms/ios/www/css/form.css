@@ -1,0 +1,38 @@
+#post-form form {
+  background: #1a1a1a;
+}
+#post-form input {
+  color: #eeeeee !important;
+}
+#post-form form label {
+  padding: 6px 0 5px 16px;
+  background: #1f1f1f;
+  border-width: 0px;
+  margin: 2px 0px;
+}
+#post-form form p.description-p {
+  color: #444;
+  text-align: center;
+  width: 100%;
+  padding: 7px 10px 7px 14px;
+}
+#post-form form textarea {
+  color: #eeeeee;
+  background: #1f1f1f;
+  width: 96%;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  top: -7px;
+  padding: 10px;
+}
+.submit-form-button {
+  width: 190px !important;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  background: none !important;
+  border: 1px solid #9c005d !important;
+  min-height: 19px !important;
+  color: #9c005d !important;
+}

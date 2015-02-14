@@ -1,39 +1,64 @@
-ionicmongo.controller('registerCtrl', function($scope, Friends, $http, socket, $rootScope) {
-  console.log("This is the login controller");
- 	console.log($rootScope.user);
-  	$scope.auth = { username: "", password: ""}
-	$http.get('http://localhost:3000/api/accounts').success(function(data) {
-		console.log("api was called");
-		console.log(data);
-		$scope.accounts = data;
-	})
+pinpoint.controller('registerCtrl', function(
+  $scope,
+  $rootScope,
+  authService,
+  $state,
+  $localStorage) {
 
-	socket.emit("connect me", "hopefull connected");
-
-	socket.on("user registered", function(data) {
-		console.log(data);
-		console.log("logged in successfully");
-		$rootScope.user = {
-			username: data.username
-		}
-		$state.go('tab.dash');		
-
-	})
-
-	socket.on("Testing", function(data) {
-		console.log(data);
-	})	
-
-
-    $scope.register = function()  {
-    	var email = $scope.auth.username;
-		var password = $scope.auth.password;
-		console.log(email, password);
-		data = {
-			username: email,
-			password: password
-		}
-		socket.emit("register user", data);
+  'use strict';
+  console.log('#### Register Controller');
+  $scope.auth = {
+    username: '',
+    password: '',
+    confirm: '',
+    phone: ''
+  };
+  $scope.register = function() {
+    console.log($scope.auth);
+    if ($scope.auth.username === '') {
+      $scope.usernameEmpty = 'true'
+    } else {
+      var status = authService.register($scope.auth);
+      status.then(function(resolve) {
+        console.log('#### Resolved');
+        console.log('#### User has been registered');
+        console.log(resolve);
+        $localStorage.user = resolve.data
+        $localStorage.loggedIn = 'true';
+        $state.go('tab.stream');
+      }, function(reject) {
+        console.log('#### Rejected');
+        console.log(reject);
+      })
     }
+  };
 
-})
+  $scope.$watch('auth.username', function() {
+    if ($scope.username !== '') {
+      $scope.usernameEmpty = 'false';
+    }
+    var data = {
+      username: $scope.auth.username
+    }
+    var check = authService.checkUsername(data);
+    check.then(function(resolve) {
+      if (resolve.data === 'Not Available') {
+        $scope.usernameExists = 'true';
+      }
+      if (resolve.data === 'Username Available') {
+        $scope.usernameExists = 'false';
+      }
+    })
+  })
+  $scope.$watch('auth.confirm', function() {
+    if ($scope.auth.confirm === '') {
+      $scope.passwordMatch = 'true';
+    } else {
+      if ($scope.auth.password === $scope.auth.confirm) {
+        $scope.passwordMatch = 'true';
+      } else {
+        $scope.passwordMatch = 'false';
+      }
+    }
+  })
+});

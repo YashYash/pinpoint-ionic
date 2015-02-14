@@ -1,24 +1,19 @@
-<ion-view title="Register">
-	<ion-nav-buttons side="left">
-	</ion-nav-buttons>
-	<ion-content class="has-header">
-		<form ng-submit="register()">
-		    <label for="name" class="item item-input">
-		    	<span class="input-label">Email</span>
-		    	<input type="text" name="email" ng-model="auth.username" placeholder="Email" required>
-		    </label>
-
-		    <label class="item item-input">
-		    	<span class="input-label">Password</span>
-		    	<input input type="password" name="password" ng-model="auth.password" placeholder="Password" required>
-		    </label>
-
-		    <button class="button button-positive button-block"  type="submit">
-		    	Register
-		    </button>
-		</form>
-		<div ng-repeat="account in accounts">
-			{{account.username}}
-		</div>
-	</ion-content>
-</ion-view>
+<div class="auth-container">
+  <img src="https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/WU1GBARftv1zQZz/login-logo.png" class="auth-icon">
+  <p class="auth-heading">Pinpoint</p>
+  <p class="auth-small-heading">Register</p>
+  <p ng-if="usernameExists === 'true'" class="error-messages error-messages-1">Username is already taken</p>
+  <p ng-if="usernameEmpty === 'true'" class="error-messages error-messages-1">Please enter a username</p>
+  <p ng-if="passwordMatch === 'false'" class="error-messages error-messages-2">Passwords do not match</p>
+  <form ng-submit="register()">
+    <input type='text' ng-model="auth.username" placeholder="Username">
+    <input type='text' ng-model="auth.email" placeholder="Email (optional)">
+    <input type='text' ng-model="auth.phone" placeholder="Phone Number">    
+    <input type='password' ng-model="auth.password" placeholder="Password">
+    <input type='password' ng-model="auth.confirm" placeholder="Confirm Password">
+    <span class="wrong-username error-crosses" ng-if="wrongUsername === 'true'">x</span>
+    <span class="wrong-password error-crosses" ng-if="wrongPassword === 'true'">x</span>
+    <button class="authenticate">Register</button>
+    <p class="auth-register-message">Already have an account? <a href="#/login">Login</a> here.</p>
+  </form>
+</div>

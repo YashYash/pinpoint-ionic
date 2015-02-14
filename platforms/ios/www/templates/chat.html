@@ -1,0 +1,21 @@
+<h1>Chat</h1>
+<ion-view title="Chat Room">
+  <ion-header-bar class="bar-subheader item-input-inset ads-header">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios7-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" ng-model="search.title">
+    </label>
+    <button class="button button-clear">
+      Cancel
+    </button>
+  </ion-header-bar>
+  <ion-content class="has-header" id="ads-container">
+  <ion-list>
+      <ion-item type="item-text-wrap" ng-repeat="chat in chats | filter:search" class="list-items global-items chat-items" ng-class-even="'no-background'">
+        <a class="chat-item" ng-href="/#/tab/chat/room/{{chat._id}}/{{userid}}">
+          <div class="profile-pic-container" style="background:url('{{chat.picture}}')"></div>
+        {{chat.username}}</a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

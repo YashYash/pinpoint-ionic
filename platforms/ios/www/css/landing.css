@@ -1,0 +1,124 @@
+/* Empty. Add your own CSS if you like */
+
+#landing {
+  background: url('https://s3.amazonaws.com/uploads.hipchat.com/27243/752569/2jbB69vdMxYkIKZ/landing-background-1.jpg');
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:5;
+}
+
+#landing #landing-overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(26,26,26,1);
+  z-index: 10;
+}
+
+#landing #logo {
+  width: 200px;
+  top: 85px;
+  display: none;
+}
+
+#landing p#sub-heading{
+  color: #9c005d;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  top: 200px;
+  display: none;
+}
+
+#landing #pin-circle{
+  width: 22px;
+  height: 22px;
+  top: 231px;
+  background: rgba(156,0,93,1);
+  border-radius: 100%;
+  display: none;
+}
+
+#landing #pin-outercircle{
+  width: 30px;
+  height: 30px;
+  top: 227px;
+  background: rgba(156,0,93,0.4);
+  border-radius: 100%;
+  display: none;
+}
+
+/*120px*/
+#landing #vertical-line{
+  top:235px;
+  height:0px;
+  width:2px;
+  background:rgb(156,0,93);
+  opacity: 1;
+}
+
+#landing #ad-count{
+  color: rgba(156,0,93,1);
+  font-weight: 300;
+  font-size: 80px;
+  top: 350px;
+  text-align: center;
+  left: -40px;
+  display: none;
+}
+
+#landing #ad-count span{
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  width: 30px;
+  position: absolute;
+  top: 59px;
+  left: 208px;
+  right: 0px;
+  margin: auto;
+}
+
+#landing #address{
+  display: none;
+  top:450px;
+  color:white;
+  display: none;
+  width: 250px;
+  text-align: center;
+  font-size: 14px;  
+}
+
+#landing #address .pink-text{
+  color:rgba(156,0,93,1) !important;
+}
+
+@media (max-height: 530px) {
+  #landing #logo {
+    top:35px;
+  }
+  #landing p#sub-heading {
+    top:146px;
+  }
+  #landing #pin-circle {
+    top:183px;
+  } 
+  #landing #pin-outercircle {
+    top:179px;
+  }   
+  #landing #vertical-line {
+    top:187px;
+  } 
+  #landing #ad-count {
+    top:295px;
+  }   
+  #landing #address {
+    top:383px;
+  }   
+}

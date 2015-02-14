@@ -28,7 +28,7 @@ pinpoint.controller('streamController', function(
 
   if(authService.status()) {
     console.log('#### User Authenticated');
-    if($rootScope.location) {
+      if($rootScope.location) {
       console.log('#### Already obtained the location. Getting streams now');
       $scope.address = $rootScope.location.address;
       var lat = $rootScope.location.lat;
@@ -108,6 +108,8 @@ pinpoint.controller('streamController', function(
   socket.on('new ad', function(data) {
     console.log('new ad has been added');
     adsService.getAds($rootScope.location.lat, $rootScope.location.lng);
+    $scope.ads = $rootScope.streamAds;;
+    $scope.$apply();
   });
 
   $scope.refreshStream = function() {

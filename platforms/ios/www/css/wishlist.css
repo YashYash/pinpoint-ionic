@@ -1,0 +1,15 @@
+.no-wishlist-items {
+  color: #9c005d;
+  font-weight: 200;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  font-size: 16px;
+  position: relative;
+  top: 100px;
+}
+.wishlist-icon {
+  display: block;
+  font-size: 20px;
+  padding: 10px 0px;
+}
